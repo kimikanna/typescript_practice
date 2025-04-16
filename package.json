@@ -1,0 +1,15 @@
+{
+  "name": "ts-basics-main",
+  "version": "1.0.0",
+  "description": "В этой теме вы познакомитесь с [typescript](https://www.typescriptlang.org/)",
+  "license": "ISC",
+  "author": "kima",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
