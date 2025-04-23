@@ -1,14 +1,11 @@
+"use strict";
 // 1. Опиши типизацию юзера
 // 2. Замени все unknown описанным типом
 // 3. Проверь работоспособность кода
-
-export type User = {
-    name: string;
-    age: number;
-    occupation: string;
-};
-
-export const users: User[] = [
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.users = void 0;
+exports.logPerson = logPerson;
+exports.users = [
     {
         name: "Антон",
         age: 25,
@@ -20,12 +17,8 @@ export const users: User[] = [
         occupation: "Программист",
     }
 ];
-
-export function logPerson(user: User) {
-    console.log(` - ${user.name}, ${user.age}`);
+function logPerson(user) {
+    console.log(" - ".concat(user.name, ", ").concat(user.age));
 }
-
 console.log("Users:");
-users.forEach(logPerson);
-
-export { };
+exports.users.forEach(logPerson);

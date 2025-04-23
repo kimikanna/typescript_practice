@@ -1,36 +1,15 @@
+"use strict";
 // Перешите интерфейс ICustomer разбив его
 // на отдельные подинтерфейсы. Структуру и нейминг
 // полей вы можете менять на свое усмотрение.
-
-enum paymentType {
-    "cash",
-    "card",
-    "credit",
-}
-
-interface IUser {
-    firstName: string;
-    lastName: string;
-    dateBirthday: Date;
-}
-
-interface IDeliveryInfo {
-    deliveryCountry: string;
-    deliveryCity: string;
-    deliveryAddress: string;
-    deliveryBuilding: number | string;
-    deliveryApartment?: number;
-    deliveryTime?: string;
-}
-  
-interface ICustomer extends IUser, IDeliveryInfo {
-    paymentType: paymentType;
-    ordersCount: number;
-    discountPercent: number;
-    currency: "EUR" | "USD" | "RUB";
-}
-
-let customer: ICustomer = {
+Object.defineProperty(exports, "__esModule", { value: true });
+var paymentType;
+(function (paymentType) {
+    paymentType[paymentType["cash"] = 0] = "cash";
+    paymentType[paymentType["card"] = 1] = "card";
+    paymentType[paymentType["credit"] = 2] = "credit";
+})(paymentType || (paymentType = {}));
+var customer = {
     firstName: "Alex",
     lastName: "Kovalev",
     dateBirthday: new Date("1990-04-15"),
@@ -43,9 +22,6 @@ let customer: ICustomer = {
     paymentType: paymentType.card,
     ordersCount: 10,
     discountPercent: 15,
-    currency: "RUB", 
-}
-
+    currency: "RUB",
+};
 console.log(customer);
-
-export { };
